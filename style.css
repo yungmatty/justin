@@ -1,0 +1,195 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 2px solid #3498db;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-style: italic;
+    font-family: "Lucida Handwriting", cursive;
+    color: #3498db;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header a{
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #3498db;
+    font-style: italic;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #ecf0f1;
+    opacity: 0.9;
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border-left: 4px solid #3498db;
+}
+
+section a {
+    color: #3498db;
+    font-style: italic;
+}
+
+h2 {
+    color: #3498db;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* Business Description */
+.business-description p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Payment Section */
+.payment-section p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.crypto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.crypto-item {
+    background: rgba(52, 152, 219, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.crypto-item:hover {
+    transform: translateY(-2px);
+    background: rgba(52, 152, 219, 0.2);
+}
+
+/* Contact Section */
+.contact-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-link {
+    display: block;
+    padding: 20px;
+    background: rgba(52, 152, 219, 0.1);
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid rgba(52, 152, 219, 0.3);
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.contact-link:hover {
+    background: rgba(52, 152, 219, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.disclaimer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #bdc3c7;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #bdc3c7;
+}
+
+.footer-note {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .crypto-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-links {
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .crypto-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    header {
+        padding: 20px 10px;
+    }
+}
